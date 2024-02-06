@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Verification Modal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+    }
+
+    #modal {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    #close-btn {
+      cursor: pointer;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+<div id="overlay">
+  <div id="modal">
+    <p>Are you 18 or older?</p>
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+    <p id="close-btn">Close</p>
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const overlay = document.getElementById("overlay");
+    const modal = document.getElementById("modal");
+    const closeBtn = document.getElementById("close-btn");
+    const yesBtn = document.getElementById("yes-btn");
+    const noBtn = document.getElementById("no-btn");
+
+    // Display the modal
+    overlay.style.display = "flex";
+
+    // Close modal function
+    function closeModal() {
+      overlay.style.display = "none";
+    }
+
+    // Event listeners
+    closeBtn.addEventListener("click", closeModal);
+    yesBtn.addEventListener("click", closeModal);
+    noBtn.addEventListener("click", function() {
+      alert("Sorry, you must be 18 or older to access this page.");
+      closeModal();
+    });
+  });
+</script>
+
+</body>
+</html>

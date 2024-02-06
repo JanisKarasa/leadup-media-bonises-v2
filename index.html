@@ -17,6 +17,18 @@
     />
   </head>
   <body>
+    <!-- POPUP -->
+    <div id="overlay">
+      <modal id="modal">
+        <div class="modal-wrapper">
+          <h1>Are you 18 or older?</h1>
+          <a href="bonises.com" id="yes-btn">Yes</a>
+          <button id="close-btn">No</button>
+          <!-- <p id="close-btn">Close</p> -->
+        </div>
+      </modal>
+    </div>
+    <!-- POPUP End -->
     <header class="header">
       <nav></nav>
       <section class="hero">
@@ -81,13 +93,13 @@
           height="1080"
           tabindex="-1"
           style="
-            width: 960px;
-            height: 540px;
+            width: 100%;
+            height: auto;
             background: rgb(35, 31, 32);
             cursor: default;
           "
         ></canvas>
-        <script src="Build/bestcaliforniagames.loader.js"></script>
+        <!-- <script src="Build/bestcaliforniagames.loader.js"></script>
         <script>
           if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             // Mobile device style: fill the whole browser client area with the game canvas:
@@ -116,7 +128,7 @@
             // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
           });
-        </script>
+        </script> -->
 
         <p style="margin-top: 30px">
           *Best played on Google Chrome Web browser
@@ -558,11 +570,18 @@
         </p>
       </div>
     </footer>
+
     <!-- Linking Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Linking jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <!-- Linking Modal Script -->
+    <script src="assets/js/popup.js"></script>
   </body>
 </html>

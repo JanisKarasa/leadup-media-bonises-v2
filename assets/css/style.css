@@ -103,7 +103,8 @@ ul.list-items li code {
   background-color: #abb8c3;
 }
 
-.info p, .info h4 {
+.info p,
+.info h4 {
   color: #000;
 }
 
@@ -359,7 +360,6 @@ body .is-layout-constrained > * + * {
 
 /* FOOTER Section End */
 
-
 /* POLICY Page Styles */
 .policy-background-color {
   background-color: #abb8c3;
@@ -369,3 +369,52 @@ body .is-layout-constrained > * + * {
   margin-bottom: 30px;
 }
 /* POLICY Page Styles End */
+
+/* POPUP Section */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+#modal {
+  /* display: block; */
+  width: 70%; /* Set the width of the modal */
+  max-width: 600px; /* Set a maximum width for larger screens */
+  height: auto;
+  background-color: #1d2730;
+  color: #cdd6dd;
+  padding-inline: 20px;
+  padding-block: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+#modal h1 {
+  margin-bottom: 50px;
+  font-size: calc(1.375rem + 1vw);
+}
+
+#modal a, #modal button {
+  font-size: calc(1rem + 1.5vw);
+}
+
+#modal a {
+  margin-right: 60px;
+}
+
+#close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #cdd6dd;
+}
+/* POPUP Section End */
