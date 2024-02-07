@@ -397,13 +397,13 @@ body .is-layout-constrained > * + * {
   text-align: center;
 }
 
-
 #modal h1 {
   margin-bottom: 50px;
   font-size: calc(1.375rem + 1vw);
 }
 
-#modal a, #modal button {
+#modal a,
+#modal button {
   font-size: calc(1rem + 1.5vw);
 }
 
