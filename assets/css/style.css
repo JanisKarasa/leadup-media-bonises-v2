@@ -44,6 +44,8 @@ a {
 
 .hero-headline {
   font-size: calc(4.325rem + 0.9vw);
+  font-weight: 700;
+  letter-spacing: .4rem;
 }
 
 .list-items {
