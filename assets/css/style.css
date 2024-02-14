@@ -413,11 +413,15 @@ body .is-layout-constrained > * + * {
   font-size: calc(1rem + 1.5vw);
 }
 
-#modal a {
+/* #modal a {
+  margin-right: 60px;
+} */
+
+#modal #yes-btn {
   margin-right: 60px;
 }
 
-#close-btn {
+#close-btn, #yes-btn {
   background-color: transparent;
   border: none;
   cursor: pointer;
