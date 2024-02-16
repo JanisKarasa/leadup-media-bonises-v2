@@ -17,7 +17,7 @@
     />
   </head>
   <body>
-    <!-- POPUP -->
+    <!-- 18+ POPUP -->
     <div id="overlay">
       <modal id="modal">
         <div class="modal-wrapper">
@@ -29,7 +29,7 @@
         </div>
       </modal>
     </div>
-    <!-- POPUP End -->
+    <!-- 18+ POPUP End -->
     <header id="header" class="header">
       <nav></nav>
       <section class="hero">
@@ -540,7 +540,7 @@
     <!-- <section class="modal-container">
       <div class="container">
         <div class="modal-content-box text-center">
-          <a href="https://bonises.com" class="close-button"
+          <a href="#header" class="close-button"
             ><i class="far fa-times-circle"></i
           ></a>
 
@@ -550,7 +550,7 @@
             your data for the purposes you have approved.
           </p>
           <a
-            href="https://bonises.com"
+            href="#header"
             class="modal-btn"
             style="font-size: 1.4rem; background-color: green"
             >Yes, I understand</a
@@ -559,5 +559,45 @@
       </div>
     </section> -->
     <!-- COOKIE MODAL End -->
+
+    <!-- COOKIE POPUP -->
+    <div class="cookie-popup-wrapper">
+      <div class="cookie-popup-content">
+        <h4>THIS SITE USES COOKIES.</h4>
+        <p style="font-size: 1rem">
+          This website uses cookies to improve your experience. We only use your
+          data for the purposes you have approved.
+        </p>
+        <div class="buttons">
+          <button class="popup-btn">Yes, I understand</button>
+          <!-- <a href="#" class="popup-btn">Learn more</a> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cookieBox = document.querySelector(".cookie-popup-wrapper");
+      acceptBtn = cookieBox.querySelector("button");
+      acceptBtn.onclick = () => {
+        //setting cookie for 1 month (30 days), after one month it'll be expired automatically
+        document.cookie = "CookieBy=Bonises; max-age=" + 60 * 60 * 24 * 30;
+        if (document.cookie) {
+          //if the above cookie is set
+          cookieBox.classList.add("hide"); //hide cookie box
+        } else {
+          //if cookie not set then alert an error
+          alert(
+            "Cookie can't be set! Please unblock this site from the cookie"
+          );
+        }
+      };
+      let checkCookie = document.cookie.indexOf("CookieBy=Bonises"); // checking
+      // if cookie is set then hide the cookie box else show it
+      checkCookie != -1
+        ? cookieBox.classList.add("hide")
+        : cookieBox.classList.remove("hide");
+    </script>
+
+    <!-- COOKIE POPUP End -->
   </body>
 </html>

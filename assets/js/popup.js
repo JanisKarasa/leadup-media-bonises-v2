@@ -1,3 +1,4 @@
+/* 18 + POPUP Logic */
 document.addEventListener("DOMContentLoaded", function () {
   const overlay = document.getElementById("overlay");
   const modal = document.getElementById("modal");
@@ -21,3 +22,4 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModal();
   });
 });
+/* 18 + POPUP Logic End */
