@@ -258,16 +258,22 @@ body .is-layout-constrained > * + * {
 }
 
 #modal {
-  /* display: block; */
-  width: 70%; /* Set the width of the modal */
-  max-width: 600px; /* Set a maximum width for larger screens */
-  height: auto;
   background-color: #1d2730;
   color: #cdd6dd;
   padding-inline: 20px;
-  padding-block: 30px;
+  padding-block: 70px;
   border-radius: 8px;
   text-align: center;
+  min-height: 300px;
+  width: 450px;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 #modal h1 {
@@ -308,8 +314,8 @@ body .is-layout-constrained > * + * {
 
 /* POPUP Section End */
 
-/* COOKIE MODAL */
-.modal-container {
+/* COOKIE MODAL from TJ */
+/* .modal-container {
   z-index: 999999999999999 !important;
   position: fixed;
   top: 0;
@@ -398,7 +404,7 @@ body .is-layout-constrained > * + * {
 
 .modal-btn:hover {
   color: #fff;
-}
+} */
 /* COOKIE MODAL End */
 
 /* COOKIE POPUP */
