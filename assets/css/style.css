@@ -210,139 +210,6 @@ body .is-layout-flex > * {
   width: 1px;
 }
 
-/* NEWSLETTER Section */
-.subscription-form form {
-  margin: auto auto 20px;
-  max-width: 620px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-}
-
-.text-field {
-  /* -ms-flex-preferred-size: 100%; */
-  /* flex-basis: 100%; */
-  width: auto;
-}
-
-@media (min-width: 568px) {
-  .subscription-form form .content {
-    float: left;
-    width: 80%;
-  }
-  .text-field {
-    margin-right: 8px;
-  }
-}
-
-.subscription-form form h5 {
-  color: #a2aeb7;
-  display: block;
-  font-family: Noto Sans, Sans-Serif;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  margin: 16px 0 8px;
-  text-transform: uppercase;
-}
-
-.subscription-form form input[type="email"],
-.subscription-form form input[type="text"] {
-  /* background: rgba(123, 140, 152, 0.1); */
-  border-color: #4a5b68;
-  border-radius: 2px;
-  color: #7b8c98;
-  font-size: 16px;
-  margin: 0;
-  min-height: 50px;
-  padding: 15px;
-  position: relative;
-  width: 100%;
-  z-index: 2;
-}
-
-/* I am 18 */
-.subscription-form form .wp-block-smg-addon-form-checkbox {
-  margin-top: 15px;
-}
-
-.subscription-form
-  form
-  .wp-block-smg-addon-form-checkbox
-  input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-label {
-  display: inline-block;
-}
-/* BUTTON */
-
-.subscription-form form button {
-  background: #44be4c;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  cursor: pointer;
-  font-family: neo-sans, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  height: 54px;
-  margin-top: 10px;
-  padding: 10px 20px;
-  white-space: nowrap;
-  width: 100%;
-}
-
-@media (min-width: 568px) {
-  .subscription-form form .act-btn {
-    float: right;
-    margin-top: 40px;
-    width: 20%;
-  }
-}
-
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled),
-button:not(:disabled) {
-  cursor: pointer;
-}
-
-@media (min-width: 568px) {
-  .subscription-form form button {
-    margin-top: 0;
-    width: auto;
-  }
-}
-
-.subscription-form form button {
-  background: #44be4c;
-  border: 0;
-  border-radius: 2px;
-  color: #fff;
-  /* cursor: pointer; */
-  font-family: neo-sans, sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  height: 54px;
-  /* margin-top: 10px; */
-  padding: 10px 20px;
-  white-space: nowrap;
-  /* width: 100%; */
-}
-/* NEWSLETTER Section End */
-
 .subscription-form form .clear {
   clear: both;
 }
@@ -421,6 +288,11 @@ body .is-layout-constrained > * + * {
   margin-right: 60px;
 }
 
+#yes-btn:hover {
+  transform: scale(1.2);
+  color: green;
+}
+
 #close-btn,
 #yes-btn {
   background-color: transparent;
@@ -428,6 +300,12 @@ body .is-layout-constrained > * + * {
   cursor: pointer;
   color: #cdd6dd;
 }
+
+#close-btn:hover {
+  transform: scale(1.2);
+  color: red;
+}
+
 /* POPUP Section End */
 
 /* COOKIE MODAL */
@@ -499,7 +377,7 @@ body .is-layout-constrained > * + * {
 }
 
 .modal-btn {
-  background-color: var(--btn);
+  background-color: green;
   border-radius: 1000px;
   border-bottom: 0px solid #e53d32;
   padding: 15px 45px;
@@ -525,63 +403,84 @@ body .is-layout-constrained > * + * {
 
 /* COOKIE POPUP */
 .cookie-popup-wrapper {
-  position: absolute;
-  bottom: 30px;
-  left: 30px;
-  max-width: 365px;
-  background: #fff;
-  padding: 25px 25px 30px 25px;
-  border-radius: 15px;
-  box-shadow: 1px 7px 14px -5px rgba (0, 0, 0, 0.15);
-  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(20px);
 }
 .cookie-popup-wrapper.hide {
   opacity: 0;
   pointer-events: none;
-  transform: scale (0.8);
+  transform: scale(0.8);
   transition: all 0.3s ease;
 }
 
-::selection {
+/* ::selection {
   color: #fff;
   background: #ecba7e;
+} */
+
+/* .cookie-popup-wrapper img {
+  max-width: 90px;
+} */
+.cookie-popup-content {
+  min-height: 300px;
+  background-color: #fff;
+  width: 450px;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 0;
+  padding: 30px 30px 50px 30px;
+  right: 0;
 }
 
-.cookie-popup-wrapper img {
-  max-width: 90px;
-}
 .cookie-popup-content h4 {
   font-size: 25px;
   font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
 }
-.cookie-popup-content {
-  margin-top: 10px;
-}
+
 .cookie-popup-content p {
-  color: #858585;
-  margin: 5px 0 20px 0;
+  color: #000;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 300;
 }
 .cookie-popup-content .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .buttons button {
-  padding: 10px 20px;
+  background-color: green;
   border: none;
-  outline: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 5px;
-  background: #ecba7f;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 50px;
+  padding: 15px 15px;
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 350px;
+  max-width: 100%;
+  margin-top: 20px;
+  /* -webkit-box-shadow: 0px 10px 25px rgb(0 0 0 / 30%); */
+  box-shadow: 0px 10px 25px rgb(0 0 0 / 30%);
 }
-.buttons button:hover {
-  transform: scale (0.97);
+button:hover {
+  transform: scale(0.97);
 }
+
 .buttons .popup-btn {
   margin: 0 10px;
 }
