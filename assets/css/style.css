@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif !important;
+  font-family: system-ui, sans-serif !important;
 }
 
 .h2,
@@ -37,82 +37,63 @@ a {
   margin-right: auto !important;
 }
 
+.body-background {
+  background-image: url(/assets/img/main-background.png);
+  /* background-repeat: no-repeat; */
+  background-size: 100%;
+}
+
 /* HERO Section */
 .hero {
-  background-color: #1d2730;
-  color: rgb(221, 64, 224);
-  background-image: url(/assets/img/header-bg.jpeg);
-  background-size: cover;
-  background-position: center;
+  /* height: 500px; */
+  position: relative;
 }
 
-.hero-headline {
-  font-size: calc(4.325rem + 0.9vw);
-  font-weight: 700;
-  letter-spacing: 0.4rem;
+.hero-logo {
+  position: relative;
+  z-index: 1;
+  /* margin-left: -70px; */
 }
 
-.list-items {
-  padding-left: 0;
+.hero-subheading {
+  position: relative;
+  z-index: 1;
+  color: white;
 }
 
-ul.list-items li {
-  align-items: center;
-  display: flex;
-  justify-content: flex-start;
-  line-height: 30px;
-  list-style-type: none;
+.illustration-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
 }
 
-ul.list-items li img {
-  margin-right: 5px;
-  width: 20px !important;
-  height: auto;
-}
-
-code {
-  font-size: 0.875em;
-  color: #d63384;
-  word-wrap: break-word;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-    "Courier New", monospace;
-  font-size: 1rem;
-  font-weight: 400;
-  text-transform: uppercase;
-}
-
-ul.list-items li code {
-  font-size: 1rem;
-  color: #d63384;
-  word-wrap: break-word;
-  font-weight: 400;
-  margin-left: 5px;
-  text-transform: uppercase;
+.game-rectangle {
+  position: relative;
+  z-index: 1;
 }
 
 /* HERO Section End */
 
 /* GAME Section */
 #game {
-  background: radial-gradient(circle, #9cfdfb, #f8464e);
-  /* background-color: #f0f3f7; */
-  padding-block: 30px;
+  padding-bottom: 30px;
+}
+
+#game p {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-transform: uppercase;
+  max-width: 1200px;
+  padding-inline: 20px;
+  margin: 0 auto;
 }
 /* GAME Section End */
 
 /* INFO Section */
 .info {
   background-color: #abb8c3;
-}
-
-.info p,
-.info h4 {
-  color: #000;
 }
 
 .has-white-background-color {
@@ -173,8 +154,8 @@ figure {
 
 /* FOOTER Section */
 footer {
-  background-color: #1d2730;
-  color: #cdd6dd;
+  background-color: #1e0b51;
+  color: #ffffff;
 }
 
 .footer-wrapper {
@@ -235,8 +216,14 @@ body .is-layout-constrained > * + * {
 /* FOOTER Section End */
 
 /* POLICY Page Styles */
-.policy-background-color {
-  background-color: #abb8c3;
+/* .policy-background {
+  background-image: url(/assets/img/main-background.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+} */
+
+#page-main, #page-header {
+  color: white;
 }
 
 #page-main p {
@@ -411,6 +398,7 @@ body .is-layout-constrained > * + * {
 /* COOKIE POPUP */
 .cookie-popup-wrapper {
   position: fixed;
+  z-index: 10;
   top: 0;
   right: 0;
   bottom: 0;
