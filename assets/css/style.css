@@ -1,5 +1,6 @@
 body {
-  font-family: system-ui, sans-serif !important;
+  /* font-family: system-ui, sans-serif !important; */
+  font-family: "aktiv-grotesk-extended", sans-serif !important;
 }
 
 .h2,
@@ -52,7 +53,11 @@ a {
 .hero-logo {
   position: relative;
   z-index: 1;
-  /* margin-left: -70px; */
+  padding-top: 50px;
+}
+
+.hero-logo img {
+  width: 70%;
 }
 
 .hero-subheading {
@@ -68,9 +73,14 @@ a {
   z-index: 0;
 }
 
-.game-rectangle {
+.game-rectangle,
+.free-game-rectangle {
   position: relative;
   z-index: 1;
+}
+.game-rectangle img {
+  width: 100%;
+  height: 250px;
 }
 
 /* HERO Section End */
@@ -88,7 +98,17 @@ a {
   max-width: 1200px;
   padding-inline: 20px;
   margin: 0 auto;
+  line-height: 1.2rem;
 }
+
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  #game p {
+    font-size: 0.5rem;
+    line-height: 0.7rem;
+  }
+}
+
 /* GAME Section End */
 
 /* INFO Section */
@@ -108,7 +128,7 @@ a {
   margin-bottom: 1.75em;
 }
 
-@media (min-width: 782px) {
+/* @media (min-width: 782px) {
   .wp-block-columns {
     flex-wrap: nowrap !important;
   }
@@ -116,7 +136,7 @@ a {
     > .wp-block-column[style*="flex-basis"] {
     flex-grow: 0;
   }
-}
+} */
 
 @media (max-width: 781px) {
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
@@ -136,20 +156,20 @@ figure {
   margin: 0 !important;
 }
 
-.wp-block-image .aligncenter,
+/* .wp-block-image .aligncenter,
 .wp-block-image .alignleft,
 .wp-block-image .alignright,
 .wp-block-image.aligncenter,
 .wp-block-image.alignleft,
 .wp-block-image.alignright {
   display: table;
-}
+} */
 
-.wp-block-image img {
+/* .wp-block-image img {
   height: auto;
   max-width: 100%;
   vertical-align: bottom;
-}
+} */
 /* INFO Section End */
 
 /* FOOTER Section */
@@ -196,23 +216,19 @@ body .is-layout-flex > * {
   clear: both;
 }
 
-footer .h5,
-footer h5 {
-  color: #a2aeb7;
-  display: block;
-  font-family: Noto Sans, Sans-Serif;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  margin: 16px 0 8px;
-  text-transform: uppercase;
-}
-
 body .is-layout-constrained > * + * {
   margin-block-start: 24px;
   margin-block-end: 0;
 }
 
+@media (max-width: 600px) {
+  /* CSS rules for small screens */
+  footer p,
+  footer a {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+}
 /* FOOTER Section End */
 
 /* POLICY Page Styles */
@@ -222,7 +238,8 @@ body .is-layout-constrained > * + * {
   background-size: 100%;
 } */
 
-#page-main, #page-header {
+#page-main,
+#page-header {
   color: white;
 }
 
