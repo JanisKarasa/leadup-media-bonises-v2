@@ -42,8 +42,13 @@
       <!-- GAME Section -->
       <section id="game">
         <div class="container text-center">
-          <div class="free-game-rectangle">
-            <img src="./assets/img/game-rectangle.png" alt="" class="" />
+          <div id="free-game-rectangle" class="free-game-rectangle">
+            <!-- <img src="./assets/img/game-rectangle.png" alt="" class="" /> -->
+            <script>
+              const box = document.getElementById("free-game-rectangle");
+              box.innerHTML =
+                '<object type="text/html" data="./game/index.html"></object>';
+            </script>
           </div>
           <p>
             Bonises.com foi projetado para um público adulto (18+) e não oferece
@@ -59,9 +64,7 @@
         <div style="height: 30px" class="space"></div>
 
         <div class="footer-wrapper is-layout-constrained">
-          <p class="">
-            JOGAR COM RESPONSABILIDADE E MODERAÇÃO.
-          </p>
+          <p class="">JOGAR COM RESPONSABILIDADE E MODERAÇÃO.</p>
 
           <div
             class="is-nowrap is-layout-flex wp-container-20 align-items-center"
