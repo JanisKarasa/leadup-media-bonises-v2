@@ -18,7 +18,7 @@ p {
 
 a {
   text-decoration: none !important;
-  color: #cdd6dd !important;
+  color: #ffffff !important;
 }
 
 .wrapper {
@@ -333,7 +333,7 @@ body .is-layout-constrained > * + * {
 /* POPUP Section End */
 
 /* COOKIE MODAL from TJ */
-/* .modal-container {
+.modal-container {
   z-index: 999999999999999 !important;
   position: fixed;
   top: 0;
@@ -422,7 +422,5 @@ body .is-layout-constrained > * + * {
 
 .modal-btn:hover {
   color: #fff;
-} */
+}
 /* COOKIE MODAL End */
-
-
