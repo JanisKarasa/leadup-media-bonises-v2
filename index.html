@@ -172,46 +172,5 @@
     </section> -->
     <!-- COOKIE MODAL End -->
 
-    <!-- COOKIE POPUP -->
-    <div class="cookie-popup-wrapper">
-      <div class="cookie-popup-content">
-        <h4>THIS SITE USES COOKIES.</h4>
-        <p style="font-size: 1rem">
-          Para melhorar a sua experiência, o nosso site utiliza cookies padrão,
-          apenas para fins aprovados.
-        </p>
-        <div class="buttons">
-          <button class="popup-btn">OK, continue para as ofertas</button>
-          <!-- <a href="#" class="popup-btn">Learn more</a> -->
-        </div>
-      </div>
-    </div>
-
-    <script>
-      const cookieBox = document.querySelector(".cookie-popup-wrapper");
-      acceptBtn = cookieBox.querySelector("button");
-      acceptBtn.onclick = () => {
-        //setting cookie for 1 month (30 days), after one month it'll be expired automatically
-        // document.cookie = "CookieBy=Bonises; max-age=" + 60 * 60 * 24 * 30;
-        //setting cookie for 1 day (24h), after one day it'll be expired automatically
-        document.cookie = "CookieBy=Bonises; max-age=" + 60 * 60 * 24 * 1;
-        if (document.cookie) {
-          //if the above cookie is set
-          cookieBox.classList.add("hide"); //hide cookie box
-        } else {
-          //if cookie not set then alert an error
-          alert(
-            "Cookie can't be set! Please unblock this site from the cookie"
-          );
-        }
-      };
-      let checkCookie = document.cookie.indexOf("CookieBy=Bonises"); // checking
-      // if cookie is set then hide the cookie box else show it
-      checkCookie != -1
-        ? cookieBox.classList.add("hide")
-        : cookieBox.classList.remove("hide");
-    </script>
-
-    <!-- COOKIE POPUP End -->
   </body>
 </html>
