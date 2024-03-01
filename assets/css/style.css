@@ -141,16 +141,6 @@ canvas {
   margin-bottom: 1.75em;
 }
 
-/* @media (min-width: 782px) {
-  .wp-block-columns {
-    flex-wrap: nowrap !important;
-  }
-  .wp-block-columns:not(.is-not-stacked-on-mobile)
-    > .wp-block-column[style*="flex-basis"] {
-    flex-grow: 0;
-  }
-} */
-
 @media (max-width: 781px) {
   .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
     flex-basis: 100% !important;
@@ -169,20 +159,6 @@ figure {
   margin: 0 !important;
 }
 
-/* .wp-block-image .aligncenter,
-.wp-block-image .alignleft,
-.wp-block-image .alignright,
-.wp-block-image.aligncenter,
-.wp-block-image.alignleft,
-.wp-block-image.alignright {
-  display: table;
-} */
-
-/* .wp-block-image img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: bottom;
-} */
 /* INFO Section End */
 
 /* FOOTER Section */
@@ -245,11 +221,6 @@ body .is-layout-constrained > * + * {
 /* FOOTER Section End */
 
 /* POLICY Page Styles */
-/* .policy-background {
-  background-image: url(/assets/img/main-background.png);
-  background-repeat: no-repeat;
-  background-size: 100%;
-} */
 
 #page-main,
 #page-header {
@@ -404,11 +375,11 @@ body .is-layout-constrained > * + * {
   background-color: green;
   border-radius: 1000px;
   border-bottom: 0px solid #e53d32;
-  padding: 15px 45px;
+  padding: 15px 15px;
   color: #ffffff;
   display: inline-block;
   font-family: "Overpass", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
