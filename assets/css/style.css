@@ -124,43 +124,6 @@ canvas {
 
 /* GAME Section End */
 
-/* INFO Section */
-.info {
-  background-color: #abb8c3;
-}
-
-.has-white-background-color {
-  background-color: #ffffff !important;
-}
-
-.wp-block-columns {
-  align-items: normal !important;
-  box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap !important;
-  margin-bottom: 1.75em;
-}
-
-@media (max-width: 781px) {
-  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-    flex-basis: 100% !important;
-  }
-}
-
-.wp-block-column.is-vertically-aligned-center {
-  align-self: center;
-}
-
-body .is-layout-flex {
-  gap: 24px;
-}
-
-figure {
-  margin: 0 !important;
-}
-
-/* INFO Section End */
-
 /* FOOTER Section */
 footer {
   background-color: #1e0b51;
@@ -173,18 +136,9 @@ footer {
   padding-inline: 20px;
 }
 
-.wp-container-18.wp-container-18 {
-  justify-content: space-between;
-}
-
-body .is-layout-flex {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-body .is-layout-flex > * {
-  margin: 0;
+.footer-wrapper > * + * {
+  margin-block-start: 24px;
+  margin-block-end: 0;
 }
 
 .screen-reader-text {
@@ -199,15 +153,6 @@ body .is-layout-flex > * {
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-.subscription-form form .clear {
-  clear: both;
-}
-
-body .is-layout-constrained > * + * {
-  margin-block-start: 24px;
-  margin-block-end: 0;
 }
 
 @media (max-width: 600px) {
@@ -231,77 +176,6 @@ body .is-layout-constrained > * + * {
   margin-bottom: 30px;
 }
 /* POLICY Page Styles End */
-
-/* POPUP Section */
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  align-items: center;
-  justify-content: center;
-}
-
-#modal {
-  background-color: #1d2730;
-  color: #cdd6dd;
-  padding-inline: 20px;
-  padding-block: 70px;
-  border-radius: 8px;
-  text-align: center;
-  min-height: 300px;
-  width: 450px;
-  max-width: 100%;
-  margin: auto;
-  border-radius: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-#modal h1 {
-  margin-bottom: 50px;
-  font-size: calc(1.375rem + 1vw);
-}
-
-#modal a,
-#modal button {
-  font-size: calc(1rem + 1.5vw);
-}
-
-/* #modal a {
-  margin-right: 60px;
-} */
-
-#modal #yes-btn {
-  margin-right: 60px;
-}
-
-#yes-btn:hover {
-  transform: scale(1.2);
-  color: green;
-}
-
-#close-btn,
-#yes-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: #cdd6dd;
-}
-
-#close-btn:hover {
-  transform: scale(1.2);
-  color: red;
-}
-
-/* POPUP Section End */
 
 /* COOKIE MODAL from TJ */
 .modal-container {
